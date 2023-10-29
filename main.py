@@ -30,3 +30,18 @@ if level == 'easy':
         if easy == 0:
             print('You lose all the chances..')
             break
+if level == 'hard':
+    os.system('clear')
+    print(logo)
+    print(f'You got {hard} chances...')
+    while p_game:
+        user_choice = int(input('Guess the number between 1 and 100: '))
+        if compare(cpu_choice, user_choice) == 'You guess it!':
+            p_game = False
+            os.system('clear')
+            print(logo)
+            print(compare(cpu_choice, user_choice))
+            hard -= 1
+            if hard == 0:
+                print('You lose all the chances..')
+                break
