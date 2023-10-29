@@ -10,3 +10,8 @@ def compare(cpu,user):
         return "Too low!"
     if user > cpu:
         return "Too high!"
+print(logo)
+p_game = True
+easy = 10
+hard = 5
+level = input('easy or hard: ')
